@@ -55,7 +55,7 @@ ROOT_URLCONF = 'proyecto_entregable.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/Users/PAULI/OneDrive/Escritorio/Entrega_python/proyecto_entregable/proyecto_entregable/plantilla/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

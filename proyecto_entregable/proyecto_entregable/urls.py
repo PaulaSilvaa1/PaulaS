@@ -1,7 +1,6 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from App_Ps.views import familia
 
-urlpatterns= [
-    path('admin/', admin.site.urls),
-    path('App_Ps/', include('App_Ps.urls'))
-]
+urlpatterns=[
+    path('familia/',familia),
+]    

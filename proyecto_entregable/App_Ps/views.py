@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from App_Ps.models import *
 
 from django.template import loader
+from App_Ps import Familia 
 
 
 def Familia(self):

@@ -1,6 +1,6 @@
 from django.urls import path
-from App_Ps.views import familia
+from App_Ps.views import Familia
 
 urlpatterns=[
-    path('familia/',familia),
+    path('familia/',Familia),
 ]    

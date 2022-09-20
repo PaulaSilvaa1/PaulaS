@@ -1,25 +1,25 @@
+from http.client import HTTPResponse
 from django.shortcuts import render
+from App_Ps.models import Curso, Entregable
 from django.http import HttpResponse
-from App_Ps.models import Familia
-from django.template import loader
 
-def familia(self):
-    familia1 = Familia(nombre = "Johana", edad = 40, fecha_nac = "1982-09-07")
-    familia1.save()
+def inicio (request):
+      return render(request, 'App_Ps/inicio.html')
 
-    familia2 = Familia(nombre = "Augusto", edad = 47, fecha_nac = "1975-03-15")
-    familia2.save()
+def estudiantes(request):
+      return render(request, 'App_Ps/estudiantes.html')
 
-    familia3 = Familia(nombre = "Sebastian", edad = 22, fecha_nac = "2000-06-27")
-    familia3.save()
+def profesores(request):
+      return render(request, 'App_Ps/profesores.html')
 
-    diccionario = {
-        "name1": familia1.nombre, "age1": familia1.edad, "birth1": familia1.fecha_nac,
-        "name2": familia2.nombre, "age2": familia2.edad, "birth2": familia2.fecha_nac,
-        "name3": familia3.nombre, "age3": familia3.edad, "birth3": familia3.fecha_nac,
-        }
-    
-    plantilla = loader.get_template("familiar.html")
-    document = plantilla.render(diccionario)
+def cursos(request):
 
-    return HttpResponse(document)
+      materia= Curso(nombre= 'Hacking', camada=1231)
+      materia.save()
+      return render(request, 'App_Ps/cursos.html')
+
+def entregables(request):
+
+      ente1= Entregable(nombre= 'Examen 1', fechaEntrega= '2022-09-20')
+      ente1.save()
+      return render(request, 'App_Ps/entregables.html')
